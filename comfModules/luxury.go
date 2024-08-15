@@ -1,7 +1,7 @@
 package comfModules
 
 
-func isPrime(number int) bool {
+func IsPrime(number int) bool {
 	if number <= 1 {
 		return false
 	}
