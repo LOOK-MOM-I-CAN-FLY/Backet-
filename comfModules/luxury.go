@@ -19,3 +19,10 @@ func Swap(a int, b int) {
 	a = b
 	b = tmp
 }
+
+func Factorial(number int) int {
+	if number == 1 || number == 0 {
+		return number
+	}
+	return number * Factorial(number-1)
+}
