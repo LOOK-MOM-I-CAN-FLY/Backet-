@@ -13,7 +13,6 @@ func IsPrime(number int) bool {
 	return true
 }
 
-
 func Swap(a int, b int) {
 	tmp := a
 	a = b
