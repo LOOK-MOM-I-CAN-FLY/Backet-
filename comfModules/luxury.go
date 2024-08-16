@@ -1,6 +1,10 @@
 package comfModules
 
-
+import (
+	"fmt"
+	"errors"
+	"log"
+)
 func IsPrime(number int) bool {
 	if number <= 1 {
 		return false
