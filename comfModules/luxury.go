@@ -42,3 +42,11 @@ func Wassup(name string) (string, error) {
 	message := fmt.Sprintf("Hi, %v. Welcome!", name)
 	return message, nil
 }
+
+func averageValue(values []int) int {
+	summary := 0
+	for i := 0; i < len(values); i++ {
+		summary += values[i]
+	}
+	return summary / len(values)
+}
