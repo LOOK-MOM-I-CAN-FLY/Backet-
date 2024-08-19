@@ -73,3 +73,12 @@ func Fibonacci(n int) int {
 
 	return n - 1
 }
+
+func WordCount(s string) map[string]int {// Считает количество слов в строке
+	wordsMap := make(map[string]int)
+	words := strings.Fields(s)
+	for _, word := range words {
+		wordsMap[word]++
+	}
+	return wordsMap
+}
