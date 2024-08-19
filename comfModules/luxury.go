@@ -43,10 +43,23 @@ func Wassup(name string) (string, error) {
 	return message, nil
 }
 
-func averageValue(values []int) int {
-	summary := 0
-	for i := 0; i < len(values); i++ {
-		summary += values[i]
+func AverageValue(values []int) float64 {
+	if len(values) == 0 {
+		return 0.0
 	}
-	return summary / len(values)
+	summary := 0
+	for _, val := range values {
+		summary += val
+	}
+	return float64(summary) / float64(len(values))
+}
+
+func Dividers(number int) []int {
+	divisors := make([]int, 0)
+	for i := 2; i <= number; i++ {
+		if number%i == 0 {
+			divisors = append(divisors, i)
+		}
+	}
+	return divisors
 }
