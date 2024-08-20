@@ -64,7 +64,7 @@ func Dividers(number int) []int {
 	return divisors
 }
 
-func Fibonacci(n int) int {
+func FibonacciRecursive(n int) int {
 	if n <= 0 {
 		return -1
 	} else if n > 2 {
@@ -72,6 +72,15 @@ func Fibonacci(n int) int {
 	}
 
 	return n - 1
+}
+
+func FibonacciCloser() func() int {
+	first, second := 0, 1
+	return func() int {
+		n := first
+		first, second = second, first+second
+		return n
+	}
 }
 
 func WordCount(s string) map[string]int {// Считает количество слов в строке
