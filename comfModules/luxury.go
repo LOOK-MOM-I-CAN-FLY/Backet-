@@ -82,3 +82,13 @@ func WordCount(s string) map[string]int {// Считает количество 
 	}
 	return wordsMap
 }
+
+func MultiFunc() func(int) int {
+	multiper := 1
+	return func(number int) int {
+		multiper *= number
+		return multiper
+	}
+
+}
+
