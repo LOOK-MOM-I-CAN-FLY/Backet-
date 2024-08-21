@@ -111,3 +111,15 @@ func (read MyReader) Read(b []byte) (int, error) {
 	return len(b), nil
 }
 
+// ROT13 Cipher
+func Rot13Cipher(c byte) byte {
+	switch {
+	case c >= 'A' && c <= 'Z': // Для заглавных букв
+		return 'A' + (c-'A'+13)%26
+	case c >= 'a' && c <= 'z': // Для строчных букв
+		return 'a' + (c-'a'+13)%26
+	default:
+		return c // Неизменные символы
+	}
+}
+
