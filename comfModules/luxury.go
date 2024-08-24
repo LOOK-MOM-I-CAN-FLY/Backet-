@@ -123,3 +123,13 @@ func Rot13Cipher(c byte) byte {
 	}
 }
 
+func IsPalindrom(str string) bool{
+    n := len(str)
+    for i:= 0; i < n / 2; i++{
+        if str[i] != str[n - 1 - i]{
+            return false
+        } 
+    }
+    return true
+}
+
