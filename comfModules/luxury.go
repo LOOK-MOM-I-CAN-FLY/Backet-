@@ -133,3 +133,21 @@ func IsPalindrom(str string) bool{
     return true
 }
 
+
+func SumOfNum(number int) int {
+	number = abs(number)
+	str := strconv.Itoa(number)
+	s := 0
+	for _, ch := range str {
+		s += int(ch - '0')
+	}
+	return s
+}
+
+func Abs(n int) int {
+	if n < 0 {
+		return -n
+	}
+	return n
+}
+
