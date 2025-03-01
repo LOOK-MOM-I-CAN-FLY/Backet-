@@ -150,4 +150,16 @@ func Abs(n int) int {
 	}
 	return n
 }
-
+//Func to move value x in a slice to the last position
+func ShiftEnd[T any](s []T, x int) []T {
+    if x < 0 {
+        return s
+    }
+    if x >= len(s)-1 {
+        return s
+    }
+    tmp := s[x]
+    s = append(s[:x], s[x+1:]...)
+    s = append(s, tmp)
+    return s
+}
